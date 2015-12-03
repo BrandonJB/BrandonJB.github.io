@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background-color: white;
+        /*background-image: url("http://orig10.deviantart.net/b8cb/f/2011/012/7/0/underwater_by_sugarock99-d36m8h9.jpg");*/
+    }
+    
+    h1 {
+        color: darkgrey;
+        text-align: left;
+        font-family: "Arial Black";
+        font-size: 50px;
+        text-shadow: 1px 1px blue;
+    }
+    
+    h1:hover {
+        color: cadetblue;
+    }
+    
+    h1.one {
+        color: darkgray;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        text-shadow: .5px .5px black;
+    }
+    
+    h2 {
+        color: darkgray;
+        text-align: center;
+        font-family: sans-serif;
+        opacity: 1;
+    }
+    
+    h2:hover {
+        color: darkcyan;
+    }
+    
+    img.one {
+        float: left;
+        padding-left: 20%;
+    }
+    
+    img.two {
+        float: right;
+        padding-right: 20%;
+    }
+    
+    #title {
+        width: 80%;
+        height: 20%;
+        border-radius: 5px;
+        border-bottom-color: lightblue;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        border-left-color: #8080ff;
+        border-left-width: medium;
+        border-left-style: solid;
+    }
+    
+    #main {
+        width: 75%;
+        height: 500px;
+        margin-bottom: 40px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        margin-top: 40px;
+        border-bottom-color: lightblue;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        border-left-color: #8080ff;
+        border-left-width: medium;
+        border-left-style: solid;
+    }
+    
+    #footer {
+        width: 85%;
+        height: 100px;
+        border-bottom-color: lightblue;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        border-right-color: #8080ff;
+        border-right-width: medium;
+        border-right-style: solid;
+        border-radius: 5px;
+        margin-top: 130px;
+        line-height: .5em;
+    }
+    
+    #fishNum {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    hr.one {
+        width: 90%;
+    }
+    
+    hr.two {
+        width: 78%;
+    }
+    
+    sup {
+        font-size: 20px;
+        color: darkgray;
+        text-decoration: none;
+    }
+    
+    b {
+        font-style: oblique;
+        font-weight: bold;
+    }
+    
+    button {
+        width: 11%;
+        height: 50px;
+        float: right;
+        background-color: lightblue;
+        border-color: white;
+        border-radius: 10px;
+        color: grey;
+        font-family: "Arial Black";
+        font-size: 20px;
+    }
+    
+    button.one {
+        float: right;
+        background-color: white;
+    }
+    
+    button.one:hover {
+        background-color: aliceblue;
+    }
+    
+    button:hover {
+        background-color: lightblue;
+    }
+    
+    p.one {
+        float: left;
+        font-family: "Arial Black";
+        color: darkgray;
+        padding-left: 20%;
+    }
+    
+    p.two {
+        float: right;
+        font-family: "Arial Black";
+        color: darkgray;
+        padding-right: 20%;
+    }
+    
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+</style>
+
+<head>
+    <title>FishCounter</title>
+    <link rel="light icon" href="http://cliparts.co/cliparts/pio/ArR/pioArRpMT.png">
+</head>
+
+<body>
+    <center>
+        <div id="title">
+            <h1>
+                <b>Fish</b>Counter&trade;
+                <sup>2.0</sup>
+                <button class="one">
+                    <a href="mailto:brandon.blessinger@stemhigh.org">Contact</a>
+                </button>
+                <button class="one">
+                    <a href="http://www.google.com" target="_blank">FishSource</a>
+                </button>
+                <button>
+                    <a href="FishCount.html">Home</a>
+                </button>
+            </h1>
+        </div>
+    </center>
+    <center>
+        <div id="main">
+            <br>
+            <br>
+            <h1 class="one">Input Number</h1>
+            <br>
+            <input id="fishNum" type="number" onkeypress="drawFish(this.value)"></input>
+            <br>
+            <br>
+            <hr class="one">
+            <hr class="one">
+            <p id="main1"></p>
+        </div>
+        <div id="footer">
+            <p class="two">Webmaster & Chief Developer:</p>
+            <p class="one">STEM School and Academy</p>
+            <br>
+            <p class="two">2015 &#124; &copy; Brandon Blessinger</p>
+            <p class="one">FishCounter&trade; &#124; &#124; 2.0</p>
+
+        </div>
+    </center>
+</body>
+<script>
+    function drawFish(x) {
+        document.getElementById("main1").innerHTML = "";
+        var val = parseFloat(document.getElementById("fishNum").value);
+        while (x >= 20) {
+            document.getElementById("main1").innerHTML += "<img src = 'http://www.clker.com/cliparts/w/S/n/s/q/Z/red-fish-hi.png'>";
+            x -= 20;
+        }
+
+        while (x >= 10) {
+            document.getElementById("main1").innerHTML += "<img src = 'http://www.clker.com/cliparts/S/i/K/H/J/C/yellow-fish-md.png'>";
+            x -= 10;
+        }
+
+        while (x >= 5) {
+            document.getElementById("main1").innerHTML += "<img src = 'http://www.clker.com/cliparts/r/I/4/X/y/m/light-blue-fish-md.png'>";
+            x -= 5
+        }
+
+        while (x >= 1) {
+            document.getElementById("main1").innerHTML += "<img src = 'http://www.clker.com/cliparts/R/l/5/j/7/7/green-fish-md.png'>";
+            x -= 1
+        }
+    }
+</script>
+
+</html>
